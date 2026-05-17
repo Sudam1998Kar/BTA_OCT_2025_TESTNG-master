@@ -16,7 +16,6 @@ public class CookiesPageSteps extends CookiesPageElements {
 	// Method to verify cookies pop-up is getting displayed.
 	public void verifyCookiesPopUpIsDisplayed() {
 		waitForElement(cookiesHeader);
-		Reports.startReporting("Verify Cookies popup displayed");
 		log("info", "Cookies pop-up is displayed successfully.");
 	}
 
@@ -25,7 +24,6 @@ public class CookiesPageSteps extends CookiesPageElements {
 		waitForElement(cookiesContent);
 		String actualMessage = getElementText(cookiesContent).trim();
 		Assert.assertEquals(actualMessage, expectedMessage, "Cookies pop-up content message is not as expected.");
-		Reports.startReporting("Verify Cookies popup message");
 		log("info", "Cookies pop-up content message is displayed as expected.");
 	}
 	
@@ -91,14 +89,12 @@ public class CookiesPageSteps extends CookiesPageElements {
 		default:
 			Assert.fail("Invalid button name provided: " + buttonName);
 		}
-		Reports.startReporting("Verify Cookies popup displayed");
 		log("info", "Clicked on the '" + buttonName + "' button successfully.");
 	}
 	
 	// Method to verify: The cookie's pop-up is disappeared from the page.
 	public void verifyCookiesPopUpIsDisappeared() {
 		waitForElementToDisappear(cookiesHeader);
-		Reports.startReporting("Verify Cookies popup displayed");
 		log("info", "Cookies pop-up is disappeared from the page successfully.");
 	}
 

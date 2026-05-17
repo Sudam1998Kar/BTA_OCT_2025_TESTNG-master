@@ -15,7 +15,6 @@ public class HomePageSteps extends HomePageElements {
 	// Method to verify whether the landing page is displayed successfully
 	public void verifyApplicationLandingPageIsDisplayed(){
 		waitForElement(applicationHubLink);
-		Reports.startReporting("Verify Cookies popup displayed");
 		log("info", "Application Landing Page is displayed successfully.");
 		Reports.setupReport();
 	}
