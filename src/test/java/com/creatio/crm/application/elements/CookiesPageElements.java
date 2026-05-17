@@ -22,16 +22,16 @@ public class CookiesPageElements extends WebCommons{
 	@FindBy(xpath = "//button[@id='CybotCookiebotDialogBodyButtonDecline']")
 	public WebElement denyButton;
 	
-	@FindBy(xpath = "//input[@id='CybotCookiebotDialogBodyLevelButtonNecessary']")
+	@FindBy(xpath = "//strong[text()='Necessary ']")
 	public WebElement necessarySwitchButton;
 	
-	@FindBy(xpath = "//input[@id='CybotCookiebotDialogBodyLevelButtonPreferences']")
+	@FindBy(xpath = "//strong[text()='Preferences ']")
 	public WebElement preferencesSwitchButton;
 	
-	@FindBy(xpath = "//input[@id='CybotCookiebotDialogBodyLevelButtonStatistics']")
+	@FindBy(xpath = "//strong[text()='Statistics ']")
 	public WebElement statisticsSwitchButton;
 	
-	@FindBy(xpath = "//input[@id='CybotCookiebotDialogBodyLevelButtonMarketing']")
+	@FindBy(xpath = "//strong[text()='Marketing ']")
 	public WebElement marketingSwitchButton;
 	
 	@FindBy(xpath = "//a[@id='CybotCookiebotDialogBodyEdgeMoreDetailsLink']")

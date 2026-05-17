@@ -15,7 +15,6 @@ public class LoginPageSteps extends LoginPageElements{
 	// Method to verify whether login page is displayed successfully.
 	public void verifyLoginPageDisplayed() {
 		waitForElement(loginPageHeader);
-		Reports.startReporting("Verify Cookies popup displayed");
 		log("info", "Login page is displayed successfully.");
 	}
 	
@@ -23,12 +22,9 @@ public class LoginPageSteps extends LoginPageElements{
 	public void enterBusinessEmailAndPassword(String businessEmail, String password) {
 		waitForElement(businessEmailTextbox);
 		enterText(businessEmailTextbox, businessEmail);
-		Reports.startReporting("Verify Cookies popup displayed");
-		log("info", "Entered business email: " + businessEmail);		
+		log("info", "Entered business email: " + businessEmail);
 		waitForElement(passwordTextbox);
 		enterText(passwordTextbox, password);
-		Reports.attachScreenshot("Test.png");
-		Reports.startReporting("Verify Cookies popup displayed");
 		log("info", "Entered password.");
 	}
 	
@@ -36,15 +32,13 @@ public class LoginPageSteps extends LoginPageElements{
 	public void enterBusinessEmail(String businessEmail) {
 		waitForElement(businessEmailTextbox);
 		enterText(businessEmailTextbox, businessEmail);
-		Reports.startReporting("Verify Cookies popup displayed");
-		log("info", "Entered business email: " + businessEmail);		
+		log("info", "Entered business email: " + businessEmail);
 	}
 	
 	// Method to click on the loginButton
 	public void clickOnLoginButton() {
 		waitForElement(loginButton);
 		click(loginButton);
-		Reports.startReporting("Verify Cookies popup displayed");
 		log("info", "Clicked on the Login button.");
 	}
 	
